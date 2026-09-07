@@ -90,12 +90,14 @@
 .row-scroll__item { flex: 0 0 270px; scroll-snap-align: start; }
 
 .instructor-card {
-  flex: 0 0 230px;
+  flex: 1 1 240px;
+  min-width: 240px;
   background: #fff; border: 1px solid var(--color-slate-200);
   border-radius: 12px; padding: 1.4rem 1.2rem;
   text-align: center; scroll-snap-align: start;
+  display: flex; flex-direction: column; align-items: center;
 }
-.instructor-card__avatar { width: 72px; height: 72px; border-radius: 50%; margin-bottom: 0.7rem; object-fit: cover; }
+.instructor-card__avatar { width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 0.7rem; object-fit: cover; flex-shrink: 0; }
 .instructor-card__name { font-size: 1rem; font-weight: 700; margin: 0 0 0.25rem; }
 .instructor-card__bio { font-size: 0.8rem; color: var(--color-slate-500); margin: 0 0 0.6rem; }
 .instructor-card__meta { font-size: 0.8rem; color: var(--color-slate-600); display: flex; align-items: center; justify-content: center; gap: 0.3rem; }

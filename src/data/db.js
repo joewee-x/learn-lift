@@ -35,6 +35,11 @@ export const users = [
     joinDate: '2024-04-09', status: 'active', verified: false,
   },
   {
+    id: 'i4', name: 'Daniel Ross', email: 'daniel@learnhub.io', role: 'instructor',
+    avatar: 'https://i.pravatar.cc/100?img=33', bio: 'Marketing strategist.',
+    joinDate: '2024-06-18', status: 'active', verified: true,
+  },
+  {
     id: 'a1', name: 'Admin User', email: 'admin@learnhub.io', role: 'admin',
     avatar: 'https://i.pravatar.cc/100?img=68', bio: 'Platform admin.',
     joinDate: '2023-01-01', status: 'active',

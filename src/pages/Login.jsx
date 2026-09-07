@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Button from '../components/ui/Button';
+import SocialAuth from '../components/SocialAuth';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
 import './auth.css';
@@ -57,6 +58,9 @@ export default function Login() {
             ))}
           </div>
         </div>
+
+        <SocialAuth mode="login" />
+        <div className="auth__divider"><span>or log in with email</span></div>
 
         <form onSubmit={submit} className="auth__form">
           {error && <div className="auth__error" role="alert">{error}</div>}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Button from '../components/ui/Button';
+import SocialAuth from '../components/SocialAuth';
 import { useAuth } from '../context/AuthContext';
 import { useToast } from '../context/ToastContext';
 import './auth.css';
@@ -35,6 +36,9 @@ export default function Signup() {
       <div className="auth__card">
         <h1 className="auth__title">Create your account</h1>
         <p className="auth__sub">Join LearnHub as a student or instructor.</p>
+
+        <SocialAuth mode="signup" />
+        <div className="auth__divider"><span>or sign up with email</span></div>
 
         <div className="auth__roles" role="radiogroup" aria-label="Account type">
           <button

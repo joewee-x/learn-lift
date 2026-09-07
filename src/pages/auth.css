@@ -34,6 +34,22 @@
 
 .auth__switch { margin-top: 1.2rem; text-align: center; font-size: 0.9rem; color: var(--color-slate-500); }
 
+.auth__social { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 0.2rem; }
+.auth__social-btn {
+  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+  width: 100%; padding: 0.62rem 1rem; border-radius: 10px;
+  border: 1px solid var(--color-slate-300); background: #fff;
+  font-size: 0.9rem; font-weight: 700; color: var(--color-slate-800);
+  cursor: pointer; transition: background 0.15s ease, border-color 0.15s ease;
+}
+.auth__social-btn:hover { background: #f8fafc; border-color: var(--color-slate-400); }
+.auth__social-btn:disabled { opacity: 0.6; cursor: wait; }
+.auth__social-btn--apple { background: #000; border-color: #000; color: #fff; }
+.auth__social-btn--apple:hover { background: #1a1a1a; }
+.auth__divider { display: flex; align-items: center; gap: 0.8rem; margin: 1rem 0; color: var(--color-slate-400); font-size: 0.78rem; }
+.auth__divider::before, .auth__divider::after { content: ''; flex: 1; height: 1px; background: var(--color-slate-200); }
+.auth__social + .auth__roles { margin-top: 1.2rem; }
+
 .auth__roles { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-bottom: 1.3rem; }
 .auth__role {
   text-align: center; padding: 1.1rem 0.8rem;

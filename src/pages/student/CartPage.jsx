@@ -14,7 +14,7 @@ export default function CartPage() {
   const { showToast } = useToast();
   const navigate = useNavigate();
   const [promo, setPromo] = useState('');
-  const [discount, setDiscount] = React.useState(0);
+  const [discount, setDiscount] = useState(0);
 
   const applyPromo = () => {
     if (promo.trim().toUpperCase() === 'SAVE10') {

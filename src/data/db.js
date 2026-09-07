@@ -173,6 +173,14 @@ export const courses = [
     whatYouLearn: ['REST APIs', 'Database design', 'DevOps basics'],
   },
   {
+    id: 'course-9', title: 'Node.js & Express APIs', subtitle: 'Build scalable backends',
+    description: 'Create production-ready REST APIs with Node.js, Express, and MongoDB from design to deployment.',
+    instructorId: 'i1', category: 'c1', level: 'Beginner', price: 69.99, status: 'published',
+    thumbnail: 'https://picsum.photos/seed/nodejs/400/225', rating: 4.6, studentCount: 11200,
+    enrolledCount: 11200, language: 'English', updatedAt: '2026-08-25', bestseller: false,
+    whatYouLearn: ['REST API design', 'Express middleware', 'MongoDB integration'],
+  },
+  {
     id: 'course-draft', title: 'Machine Learning Bootcamp', subtitle: 'From zero to ML engineer',
     description: 'A comprehensive machine learning course covering algorithms, neural networks, and practical projects.',
     instructorId: 'i3', category: 'c4', level: 'Intermediate', price: 129.99, status: 'draft',

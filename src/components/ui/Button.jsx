@@ -16,11 +16,11 @@ const sizes = {
 
 export default function Button({
   variant = 'primary', size = 'md', className = '', children,
-  loading, disabled, ...props
+  type = 'button', loading, disabled, ...props
 }) {
   const classes = ['btn', variants[variant], sizes[size], loading ? 'btn--loading' : '', className].filter(Boolean).join(' ');
   return (
-    <button className={classes} disabled={disabled || loading} {...props}>
+    <button type={type} className={classes} disabled={disabled || loading} {...props}>
       {loading ? <span className="btn__spinner" aria-hidden="true" /> : children}
       {loading && <span className="sr-only">Loading</span>}
     </button>

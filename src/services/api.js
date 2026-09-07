@@ -159,6 +159,23 @@ export const api = {
     await delay(100);
     return categories;
   },
+  async createCategory(name) {
+    await delay(150);
+    const trimmed = name.trim();
+    if (!trimmed) throw new Error('Name is required');
+    if (categories.some((c) => c.name.toLowerCase() === trimmed.toLowerCase())) {
+      throw new Error('Category already exists');
+    }
+    const cat = { id: 'c' + Date.now(), name: trimmed, courses: 0 };
+    categories.push(cat);
+    return cat;
+  },
+  async deleteCategory(id) {
+    await delay(150);
+    const i = categories.findIndex((c) => c.id === id);
+    if (i >= 0) categories.splice(i, 1);
+    return true;
+  },
   async getUsersIncludingStudents() {
     await delay(100);
     return users;

@@ -39,13 +39,14 @@ export default function CourseWizard() {
 
   const submit = async (mode) => {
     setSubmitting(true);
-    await api.createCourse(user.id, {
+    const id = await api.createCourse(user.id, {
       title: form.title, subtitle: form.subtitle, category: form.category,
       level: form.level, language: form.language, description: form.description,
       whatYouLearn: form.whatYouLearn.filter((l) => l.trim()),
       price: form.priceType === 'free' ? 0 : Number(form.price),
       thumbnail: form.thumbnail || 'https://picsum.photos/seed/newcourse/400/225',
     });
+    if (mode === 'publish') await api.setCourseStatus(id, 'pending');
     setSubmitting(false);
     showToast(mode === 'publish' ? 'Submitted for review' : 'Saved as draft', mode === 'publish' ? 'info' : 'success');
     navigate('/instructor/courses');

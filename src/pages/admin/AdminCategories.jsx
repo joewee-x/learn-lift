@@ -16,14 +16,21 @@ export default function AdminCategories() {
     api.getCategories().then((c) => { setCats(c); setLoading(false); });
   }, []);
 
-  const add = () => {
-    if (!newName.trim()) return;
-    setCats((list) => [...list, { id: 'c' + Date.now(), name: newName, courses: 0 }]);
-    setNewName('');
-    showToast('Category added');
+  const add = async () => {
+    const name = newName.trim();
+    if (!name) return;
+    try {
+      const cat = await api.createCategory(name);
+      setCats((list) => [...list, cat]);
+      setNewName('');
+      showToast('Category added');
+    } catch (err) {
+      showToast(err.message || 'Failed to add category', 'error');
+    }
   };
 
-  const remove = (id) => {
+  const remove = async (id) => {
+    await api.deleteCategory(id);
     setCats((list) => list.filter((c) => c.id !== id));
     showToast('Category removed', 'info');
   };
@@ -46,15 +53,21 @@ export default function AdminCategories() {
         </div>
       </div>
 
-      <div className="flex gap-2 mb-5">
+      <form
+        className="flex gap-2 mb-5"
+        onSubmit={(e) => {
+          e.preventDefault();
+          add();
+        }}
+      >
         <input
           className="flex-1 max-w-xs border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-brand-400"
           placeholder="New category name…"
           value={newName}
           onChange={(e) => setNewName(e.target.value)}
         />
-        <Button onClick={add}><Icon name="plus" size={16} /> Add category</Button>
-      </div>
+        <Button type="submit"><Icon name="plus" size={16} /> Add category</Button>
+      </form>
 
       {loading ? <Skeleton className="h-64" /> : (
         <DataTable

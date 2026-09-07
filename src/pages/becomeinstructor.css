@@ -1,0 +1,35 @@
+.bi__hero {
+  background: linear-gradient(135deg, #431407 0%, #c2320c 60%, #f95b16 100%);
+  color: #fff; text-align: center; padding: 4.5rem 1.25rem;
+}
+.bi__hero-inner { max-width: 660px; margin: 0 auto; }
+.bi__title { color: #fff; font-size: 2.3rem; font-weight: 800; line-height: 1.15; margin: 0 0 0.8rem; }
+.bi__sub { color: #ffe8d5; font-size: 1.05rem; margin: 0 auto 1.5rem; max-width: 520px; }
+.bi__cta .btn { background: #fff; color: #c2320c; }
+.bi__cta .btn:hover { background: #ffe8d5; }
+.bi__stats { margin-top: 1.2rem; font-size: 0.85rem; color: #fff0e6; }
+
+.bi__benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.bi__benefit { background: #fff; border: 1px solid var(--color-slate-200); border-radius: 14px; padding: 1.5rem; }
+.bi__benefit-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--color-accent-50); color: var(--color-accent-600); display: flex; align-items: center; justify-content: center; margin-bottom: 0.8rem; }
+.bi__benefit h3 { margin: 0 0 0.3rem; font-size: 1.05rem; }
+.bi__benefit p { color: var(--color-slate-500); font-size: 0.9rem; margin: 0; }
+
+.bi__steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.bi__step { text-align: center; padding: 1rem; }
+.bi__step-num {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--color-brand-600); color: #fff; font-weight: 800;
+  display: inline-flex; align-items: center; justify-content: center; margin-bottom: 0.6rem;
+}
+.bi__step h3 { margin: 0 0 0.3rem; }
+.bi__step p { color: var(--color-slate-500); font-size: 0.88rem; margin: 0; }
+
+.bi__banner {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  background: linear-gradient(135deg, var(--color-brand-600), var(--color-brand-800));
+  border-radius: 16px; padding: 2rem; color: #fff; margin: 2rem 0;
+}
+.bi__banner h2 { color: #fff; margin: 0 0 0.3rem; }
+.bi__banner p { color: #dbe4ff; margin: 0; }
+.bi__back { margin: 1rem 0 2rem; font-size: 0.9rem; }

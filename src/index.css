@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dbe7fe;
+  --color-brand-200: #bfd4fe;
+  --color-brand-300: #93b6fd;
+  --color-brand-400: #6090fa;
+  --color-brand-500: #3b6cf6;
+  --color-brand-600: #2552eb;
+  --color-brand-700: #1d40d8;
+  --color-brand-800: #1e35af;
+  --color-brand-900: #1e328a;
+  --color-brand-950: #172054;
+  --color-accent-50: #fff5ed;
+  --color-accent-100: #ffe8d5;
+  --color-accent-200: #feccaa;
+  --color-accent-300: #fda875;
+  --color-accent-400: #fb783c;
+  --color-accent-500: #f95b16;
+  --color-accent-600: #ea430c;
+  --color-accent-700: #c2320c;
+  --color-accent-800: #9a2a12;
+  --color-accent-900: #7c2512;
+  --color-accent-950: #431007;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased font-sans;
+  }
+  h1, h2, h3, h4 {
+    @apply text-slate-900;
+  }
+  a {
+    @apply text-brand-700 no-underline;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .p-safe {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}

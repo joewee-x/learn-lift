@@ -1,0 +1,60 @@
+.cert-card {
+  background: #fff; border: 1px solid var(--color-slate-200);
+  border-radius: 16px; padding: 1.6rem;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  position: relative; overflow: hidden;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.cert-card:hover { box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1); transform: translateY(-2px); }
+.cert-card::before {
+  content: ''; position: absolute; inset: 0; opacity: 0.04;
+  background-image: radial-gradient(circle at 20% 30%, #2552eb 0, transparent 40%), radial-gradient(circle at 80% 70%, #2552eb 0, transparent 40%);
+}
+.cert-card__ribbon {
+  font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-brand-700); background: var(--color-brand-50);
+  padding: 0.25rem 0.8rem; border-radius: 999px;
+}
+.cert-card__title { font-size: 1.05rem; font-weight: 800; margin: 0.9rem 0 0.35rem; }
+.cert-card__meta { font-size: 0.8rem; color: var(--color-slate-500); margin: 0; }
+.cert-card__date { font-size: 0.75rem; color: var(--color-slate-400); margin: 0.2rem 0 1rem; }
+.cert-card__actions { display: flex; gap: 0.5rem; }
+
+.cert-preview {
+  border: 2px solid var(--color-brand-600);
+  border-radius: 12px;
+  background: #fff; text-align: center;
+  padding: 2.6rem 2rem;
+  position: relative;
+}
+.cert-preview::before {
+  content: ''; position: absolute; inset: 10px;
+  border: 1px solid var(--color-brand-200);
+  border-radius: 8px; pointer-events: none;
+}
+.cert-preview__badge { font-size: 2.2rem; }
+.cert-preview__title {
+  font-size: 1.4rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--color-brand-700); margin: 0.4rem 0 1.4rem;
+}
+.cert-preview__this { font-size: 0.85rem; color: var(--color-slate-500); margin: 0.1rem 0; text-transform: uppercase; letter-spacing: 0.04em; }
+.cert-preview__name { font-size: 1.6rem; font-weight: 800; color: #111; margin: 0.2rem 0; font-family: Georgia, serif; }
+.cert-preview__course { font-size: 1.15rem; font-weight: 700; color: var(--color-brand-800); margin: 0.15rem 0 1.4rem; }
+.cert-preview__date { font-size: 0.8rem; color: var(--color-slate-500); margin-bottom: 2rem; }
+.cert-preview__footer {
+  display: flex; justify-content: space-between; align-items: flex-end;
+}
+.cert-preview__sig { font-family: 'Dancing Script', Georgia, cursive; font-size: 1.4rem; color: #111; border-bottom: 1px solid #cbd5e1; padding-bottom: 0.2rem; }
+.cert-preview__role { font-size: 0.7rem; color: var(--color-slate-400); text-transform: uppercase; }
+.cert-preview__seal {
+  width: 54px; height: 54px; border-radius: 50%;
+  background: var(--color-brand-600); color: #fff;
+  font-weight: 800; font-size: 1.1rem;
+  display: flex; align-items: center; justify-content: center;
+}
+
+@media print {
+  .navbar, .tabbar, .modal-overlay, .cert-card__actions, .modal__header, .modal__footer, .modal__close { display: none !important; }
+  .modal-overlay { position: static; background: none; padding: 0; }
+  .modal { max-width: 100%; box-shadow: none; border: none; }
+}

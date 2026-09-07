@@ -1,0 +1,29 @@
+.statcard {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: #fff;
+  border: 1px solid var(--color-slate-200);
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+}
+
+.statcard__icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.statcard__icon--brand { background: var(--color-brand-50); color: var(--color-brand-600); }
+.statcard__icon--accent { background: var(--color-accent-50); color: var(--color-accent-600); }
+.statcard__icon--green { background: #ecfdf5; color: #059669; }
+.statcard__icon--amber { background: #fffbeb; color: #d97706; }
+
+.statcard__info { display: flex; flex-direction: column; }
+.statcard__label { font-size: 0.78rem; font-weight: 600; color: var(--color-slate-500); text-transform: uppercase; letter-spacing: 0.03em; }
+.statcard__value { font-size: 1.55rem; font-weight: 800; color: var(--color-slate-900); line-height: 1.2; }
+.statcard__sub { font-size: 0.75rem; color: var(--color-slate-500); }

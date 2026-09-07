@@ -1,0 +1,65 @@
+.adminbar {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 240px;
+  background: #0f172a;
+  color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+  transition: transform 0.2s ease, width 0.2s ease;
+}
+
+.adminbar__logo {
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 1.1rem 1.2rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+.adminbar__mark {
+  width: 30px; height: 30px; border-radius: 8px;
+  background: linear-gradient(135deg, var(--color-brand-500), var(--color-brand-700));
+  color: #fff; font-weight: 800; font-size: 0.8rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.adminbar__name { font-weight: 700; color: #f1f5f9; font-size: 0.95rem; }
+
+.adminbar__nav { flex: 1; padding: 1rem 0.7rem; overflow-y: auto; }
+.adminbar__group { margin-bottom: 1.2rem; }
+.adminbar__group-label {
+  display: block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; color: #64748b; padding: 0 0.7rem; margin-bottom: 0.4rem;
+}
+.adminbar__link {
+  display: flex; align-items: center; gap: 0.65rem;
+  padding: 0.55rem 0.7rem; border-radius: 8px;
+  font-size: 0.88rem; font-weight: 500; color: #cbd5e1;
+  margin-bottom: 2px; width: 100%; text-align: left; cursor: pointer;
+  background: none; border: none;
+}
+.adminbar__link:hover { background: rgba(148, 163, 184, 0.12); color: #fff; }
+.adminbar__link--active { background: rgba(59, 108, 246, 0.18); color: #93b6fd; font-weight: 600; }
+
+.adminbar__foot { padding: 0.7rem; border-top: 1px solid rgba(148, 163, 184, 0.15); }
+
+.adminbar__collapse {
+  position: absolute; top: 0.9rem; right: -42px;
+  background: #0f172a; color: #cbd5e1;
+  border: none; border-radius: 0 8px 8px 0;
+  width: 42px; height: 40px; cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .adminbar {
+    width: 64px;
+    transform: translateX(0);
+  }
+  .adminbar__name, .adminbar__group-label, .adminbar__link span { display: none; }
+  .adminbar__link { justify-content: center; padding: 0.6rem; }
+  .adminbar__logo { justify-content: center; padding: 1.1rem 0.5rem; }
+}
+@media (max-width: 640px) {
+  .adminbar { transform: translateX(-100%); width: 72px; }
+  .adminbar--collapsed { transform: translateX(0); }
+  .adminbar__collapse { display: block; }
+}

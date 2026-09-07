@@ -1,0 +1,11 @@
+.qa-item { background: #fff; border: 1px solid var(--color-slate-200); border-radius: 14px; padding: 1.1rem; }
+.qa-item__question { font-size: 0.92rem; color: var(--color-slate-800); margin: 0.8rem 0; }
+.qa-item__reply {
+  background: var(--color-brand-50); border-left: 3px solid var(--color-brand-500);
+  border-radius: 8px; padding: 0.7rem 0.9rem; margin-bottom: 0.8rem;
+}
+.qa-item__replyform textarea {
+  width: 100%; border: 1px solid var(--color-slate-200); border-radius: 10px;
+  padding: 0.6rem 0.85rem; font-size: 0.88rem; margin-bottom: 0.5rem; resize: vertical;
+}
+.qa-item__replyform textarea:focus { outline: none; border-color: var(--color-brand-400); }

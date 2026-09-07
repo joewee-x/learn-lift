@@ -1,0 +1,25 @@
+.pb { width: 100%; }
+
+.pb__track {
+  height: 8px;
+  background: var(--color-slate-200);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.pb__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-brand-500), var(--color-brand-600));
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.pb__label {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-slate-600);
+}
+
+.pb--sm .pb__track { height: 6px; }

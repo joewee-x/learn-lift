@@ -1,0 +1,30 @@
+.set-card {
+  background: #fff; border: 1px solid var(--color-slate-200);
+  border-radius: 14px; padding: 1.4rem;
+}
+.set-card__title { font-size: 1rem; font-weight: 800; margin: 0 0 1.1rem; }
+.set-field { display: flex; flex-direction: column; gap: 0.3rem; }
+.set-field span { font-size: 0.82rem; font-weight: 700; color: var(--color-slate-600); }
+.set-field input {
+  padding: 0.6rem 0.85rem; border: 1px solid var(--color-slate-200);
+  border-radius: 10px; font-size: 0.9rem; background: #f8fafc;
+}
+.set-field input:focus { outline: none; border-color: var(--color-brand-400); box-shadow: 0 0 0 3px rgba(37, 82, 235, 0.1); background: #fff; }
+
+.set-pay {
+  display: flex; align-items: center; gap: 0.9rem;
+  border: 1px solid var(--color-slate-200); border-radius: 12px; padding: 0.9rem 1rem;
+}
+.set-pay__icon { font-size: 1.4rem; }
+.set-pay .btn { margin-left: auto; }
+
+.set-toggles { display: flex; flex-direction: column; }
+.set-toggle {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 0.85rem 0; border-bottom: 1px solid var(--color-slate-100);
+  cursor: pointer;
+}
+.set-toggle:last-child { border-bottom: none; }
+.set-toggle__label { font-size: 0.9rem; font-weight: 600; display: block; }
+.set-toggle__desc { font-size: 0.78rem; color: var(--color-slate-500); }
+.set-toggle__input { width: 40px; height: 22px; accent-color: var(--color-brand-600); }

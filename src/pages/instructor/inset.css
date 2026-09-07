@@ -1,0 +1,10 @@
+.ins-select {
+  padding: 0.6rem 0.85rem; border: 1px solid var(--color-slate-200);
+  border-radius: 10px; font-size: 0.9rem; background: #fff; width: 100%;
+}
+
+.set-field textarea {
+  padding: 0.6rem 0.85rem; border: 1px solid var(--color-slate-200);
+  border-radius: 10px; font-size: 0.9rem; background: #f8fafc; width: 100%; resize: vertical;
+}
+.set-field textarea:focus { outline: none; border-color: var(--color-brand-400); background: #fff; }

@@ -1,0 +1,85 @@
+.ccard {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--color-slate-200);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.ccard:hover {
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  transform: translateY(-2px);
+}
+
+.ccard__media { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--color-slate-100); }
+.ccard__media img { width: 100%; height: 100%; object-fit: cover; }
+
+.ccard__bs {
+  position: absolute;
+  top: 0.6rem;
+  left: 0;
+  background: #f59e0b;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.ccard__body { padding: 0.9rem 1rem 1rem; }
+
+.ccard__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  margin: 0.35rem 0 0.2rem;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ccard__instructor {
+  font-size: 0.8rem;
+  color: var(--color-slate-500);
+  margin: 0 0 0.25rem;
+}
+
+.ccard__meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.ccard__price { font-size: 1rem; font-weight: 800; color: var(--color-slate-900); }
+.ccard__students { font-size: 0.75rem; color: var(--color-slate-500); }
+
+.clist {
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid var(--color-slate-200);
+  border-radius: 12px;
+  padding: 0.9rem;
+  align-items: center;
+}
+
+.clist__media { border-radius: 8px; overflow: hidden; aspect-ratio: 16/9; background: var(--color-slate-100); }
+.clist__media img { width: 100%; height: 100%; object-fit: cover; }
+
+.clist__title { font-size: 0.95rem; font-weight: 700; color: var(--color-slate-900); }
+.clist__title:hover { color: var(--color-brand-700); }
+.clist__instructor { font-size: 0.8rem; color: var(--color-slate-500); margin: 0.1rem 0 0.2rem; }
+.clist__price { font-weight: 800; color: var(--color-slate-900); }
+.clist__actions { display: flex; gap: 0.4rem; flex-direction: column; align-items: stretch; }
+.clist__right { text-align: right; }
+
+@media (max-width: 640px) {
+  .clist { grid-template-columns: 90px 1fr; }
+  .clist__right { display: none; }
+  .clist__actions { grid-column: 1 / -1; flex-direction: row; }
+}

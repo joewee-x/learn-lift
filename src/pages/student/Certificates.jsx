@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../../components/ui/Button';
 import Icon from '../../components/ui/Icon';
 import Modal from '../../components/ui/Modal';
@@ -36,7 +37,7 @@ export default function Certificates() {
             icon="🏆"
             title="No certificates yet"
             description="Complete a course with a passing grade to earn your certificate."
-            action={<Button variant="primary" onClick={() => window.location = '/courses'}>Explore courses</Button>}
+            action={<Link to="/courses"><Button variant="primary">Explore courses</Button></Link>}
           />
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
